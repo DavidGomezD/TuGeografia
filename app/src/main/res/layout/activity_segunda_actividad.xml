@@ -30,7 +30,7 @@
         android:background="@drawable/b_puntos"
         android:gravity="center"
         android:text="Tu puntuación: XX"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

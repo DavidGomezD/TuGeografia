@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView Estado1, Estado2, Estado3, Capital1, Capital2, Capital3, SeleccionEstado, SeleccionCapital, Califica, Marcador;
+    TextView Estado1, Estado2, Estado3, Capital1, Capital2, Capital3, SeleccionEstado, SeleccionCapital, Califica, Marcador, TotalVidas;
     Button BE1, BE2, BE3, BC1, BC2, BC3;
 
     //Sirve para identificar cuando se da el primer y segundo click
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Integer SeGano = 0;
     //Indicara el fin del juego
     Integer FinApp = 0;
+    Integer Vidas = 3;
     //Sirve para borrar los Estados y Capitales
     String BorrarEstado = "";
     String BorrarCapital = "";
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Capital3 = (TextView) findViewById(R.id.textView6);
 
         Marcador = (TextView) findViewById(R.id.textView10);
+        TotalVidas = (TextView) findViewById(R.id.txtVidas);
 
         SeleccionEstado = (TextView) findViewById(R.id.textView7);
         SeleccionCapital = (TextView) findViewById(R.id.textView8);
@@ -69,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
         BC1 = (Button) findViewById(R.id.button16);
         BC2 = (Button) findViewById(R.id.button17);
         BC3 = (Button) findViewById(R.id.button18);
+
+        //--------------------Inicia las vidas del juego--------------------
+
+        IniciaVidas();
 
         //--------------------Llenado de los arreglos--------------------
 
@@ -289,10 +295,12 @@ public class MainActivity extends AppCompatActivity {
         Puntos ++;
         Marcador.setText("Puntos: " + Puntos);
     }
-    //Menos 1 punto
+    //Menos 1 punto y menos 1 vida
     public void DecrementaP(){
         Puntos --;
+        Vidas --;
         Marcador.setText("Puntos: " + Puntos);
+        TotalVidas.setText("Vidas: " + Vidas);
     }
     //LLena los arreglos
     public void LLenaLosArreglos(){
@@ -480,13 +488,11 @@ public class MainActivity extends AppCompatActivity {
             OrdenamientoAleatorio();
             //Reiniciara la varable de SeGano a 0
             SeGano = 0;
-            //Incrementara a 1 la variable FinApp
-            FinApp ++;
         }
     }
     //Finaliza el Activiti principal
     public void FinalizaActivity(){
-        if (FinApp == 3){
+        if (Vidas == 0){
             Intent i = new Intent(this, SegundaActividad.class);
             i.putExtra("MandarPuntos", Puntos.toString());
             startActivity(i);
@@ -503,5 +509,9 @@ public class MainActivity extends AppCompatActivity {
         BC1.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
         BC2.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
         BC3.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+    }
+    //Inicia las vidas
+    public void IniciaVidas() {
+        TotalVidas.setText("Vidas: "+Vidas);
     }
 }
