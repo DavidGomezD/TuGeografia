@@ -22,7 +22,7 @@ public class SegundaActividad extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String dato = bundle.getString("MandarPuntos");
 
-        TusPuntos.setText("Puntuación final: "+dato);
+        TusPuntos.setText("Fin del juego puntuación: "+dato);
 
         bFin = (Button) findViewById(R.id.bFin);
 
