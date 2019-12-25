@@ -31,6 +31,8 @@ public class SegundaActividad extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), portada.class);
                 startActivity(i);
+                //termina la actividad para que no se pueda regresar
+                finish();
             }
         });
         
