@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView Estado1, Estado2, Estado3, Capital1, Capital2, Capital3, SeleccionEstado, SeleccionCapital, Califica, Marcador;
     Button BE1, BE2, BE3, BC1, BC2, BC3;
+
     //Sirve para identificar cuando se da el primer y segundo click
     Integer AppInicio = 0;
     //Almacena los puntos
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         BE1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Cambia el color del boton
+                BE1.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
                 SeleccionEstado.setText(Estado1.getText().toString());
                 BorrarEstado = SeleccionEstado.getText().toString();
                 calificiar();
@@ -93,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         BE2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Cambia el color del boton
+                BE2.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
                 SeleccionEstado.setText(Estado2.getText().toString());
                 BorrarEstado = SeleccionEstado.getText().toString();
                 calificiar();
@@ -104,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
         BE3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Cambia el color del boton
+                BE3.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
                 SeleccionEstado.setText(Estado3.getText().toString());
                 BorrarEstado = SeleccionEstado.getText().toString();
                 calificiar();
@@ -115,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
         BC1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Cambia el color del boton
+                BC1.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
                 SeleccionCapital.setText(Capital1.getText().toString());
                 BorrarCapital = SeleccionCapital.getText().toString();
                 calificiar();
@@ -126,6 +135,8 @@ public class MainActivity extends AppCompatActivity {
         BC2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Cambia el color del boton
+                BC2.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
                 SeleccionCapital.setText(Capital2.getText().toString());
                 BorrarCapital = SeleccionCapital.getText().toString();
                 calificiar();
@@ -137,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
         BC3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Cambia el color del boton
+                BC3.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
                 SeleccionCapital.setText(Capital3.getText().toString());
                 BorrarCapital = SeleccionCapital.getText().toString();
                 calificiar();
@@ -218,6 +231,8 @@ public class MainActivity extends AppCompatActivity {
             //Reinicia el contador del boton a 0
             AppInicio = 0;
         }
+            //Cambia el color de todos los botones a anaranjado
+            BotonesAnaranjados();
         }
     }
     //Borra los Estados y Capitales
@@ -456,6 +471,13 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
-
-
+    //Cambia el color de los botones a anaranjado
+    public void BotonesAnaranjados() {
+        BE1.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+        BE2.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+        BE3.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+        BC1.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+        BC2.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+        BC3.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_redondo));
+    }
 }
