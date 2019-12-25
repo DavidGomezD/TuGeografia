@@ -83,78 +83,102 @@ public class MainActivity extends AppCompatActivity {
         BE1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cambia el color del boton
-                BE1.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
-                SeleccionEstado.setText(Estado1.getText().toString());
-                BorrarEstado = SeleccionEstado.getText().toString();
-                calificiar();
-                VerificarTV();
-                FinalizaActivity();
+                if (Estado1.getText() == ""){
+                    //Boton sin texto no hacer nada
+                }else {
+                    //Cambia el color del boton
+                    BE1.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
+                    SeleccionEstado.setText(Estado1.getText().toString());
+                    BorrarEstado = SeleccionEstado.getText().toString();
+                    calificiar();
+                    VerificarTV();
+                    FinalizaActivity();
+                }
             }
         });
 
         BE2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cambia el color del boton
-                BE2.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
-                SeleccionEstado.setText(Estado2.getText().toString());
-                BorrarEstado = SeleccionEstado.getText().toString();
-                calificiar();
-                VerificarTV();
-                FinalizaActivity();
+                if (Estado2.getText() == ""){
+                    //Boton sin texto no hacer nada
+                }else {
+                    //Cambia el color del boton
+                    BE2.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
+                    SeleccionEstado.setText(Estado2.getText().toString());
+                    BorrarEstado = SeleccionEstado.getText().toString();
+                    calificiar();
+                    VerificarTV();
+                    FinalizaActivity();
+                }
             }
         });
 
         BE3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cambia el color del boton
-                BE3.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
-                SeleccionEstado.setText(Estado3.getText().toString());
-                BorrarEstado = SeleccionEstado.getText().toString();
-                calificiar();
-                VerificarTV();
-                FinalizaActivity();
+                if (Estado3.getText() == ""){
+                    //Boton sin texto no hacer nada
+                }else {
+                    //Cambia el color del boton
+                    BE3.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
+                    SeleccionEstado.setText(Estado3.getText().toString());
+                    BorrarEstado = SeleccionEstado.getText().toString();
+                    calificiar();
+                    VerificarTV();
+                    FinalizaActivity();
+                }
             }
         });
 
         BC1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cambia el color del boton
-                BC1.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
-                SeleccionCapital.setText(Capital1.getText().toString());
-                BorrarCapital = SeleccionCapital.getText().toString();
-                calificiar();
-                VerificarTV();
-                FinalizaActivity();
+                if (Capital1.getText() == ""){
+                    //Boton sin texto no hacer nada
+                }else {
+                    //Cambia el color del boton
+                    BC1.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
+                    SeleccionCapital.setText(Capital1.getText().toString());
+                    BorrarCapital = SeleccionCapital.getText().toString();
+                    calificiar();
+                    VerificarTV();
+                    FinalizaActivity();
+                }
             }
         });
 
         BC2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cambia el color del boton
-                BC2.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
-                SeleccionCapital.setText(Capital2.getText().toString());
-                BorrarCapital = SeleccionCapital.getText().toString();
-                calificiar();
-                VerificarTV();
-                FinalizaActivity();
+                if (Capital2.getText() == ""){
+                    //Boton sin texto no hacer nada
+                }else {
+                    //Cambia el color del boton
+                    BC2.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
+                    SeleccionCapital.setText(Capital2.getText().toString());
+                    BorrarCapital = SeleccionCapital.getText().toString();
+                    calificiar();
+                    VerificarTV();
+                    FinalizaActivity();
+                }
             }
         });
 
         BC3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Cambia el color del boton
-                BC3.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
-                SeleccionCapital.setText(Capital3.getText().toString());
-                BorrarCapital = SeleccionCapital.getText().toString();
-                calificiar();
-                VerificarTV();
-                FinalizaActivity();
+                if (Capital3.getText() == ""){
+                    //Boton sin texto no hacer nada
+                }else {
+                    //Cambia el color del boton
+                    BC3.setBackgroundDrawable(getResources().getDrawable(R.drawable.b_encendido));
+                    SeleccionCapital.setText(Capital3.getText().toString());
+                    BorrarCapital = SeleccionCapital.getText().toString();
+                    calificiar();
+                    VerificarTV();
+                    FinalizaActivity();
+                }
             }
         });
 
