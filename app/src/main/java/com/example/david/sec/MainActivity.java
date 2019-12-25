@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         BE1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Estado1.getText() == ""){
+                if (Estado1.getText() == "" || Estado1.getText() == SeleccionEstado.getText()){
                     //Boton sin texto no hacer nada
                 }else {
                     //Cambia el color del boton
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         BE2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Estado2.getText() == ""){
+                if (Estado2.getText() == "" || Estado2.getText() == SeleccionEstado.getText()){
                     //Boton sin texto no hacer nada
                 }else {
                     //Cambia el color del boton
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         BE3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Estado3.getText() == ""){
+                if (Estado3.getText() == "" || Estado3.getText() == SeleccionEstado.getText()){
                     //Boton sin texto no hacer nada
                 }else {
                     //Cambia el color del boton
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         BC1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Capital1.getText() == ""){
+                if (Capital1.getText() == "" || Capital1.getText() == SeleccionCapital.getText()){
                     //Boton sin texto no hacer nada
                 }else {
                     //Cambia el color del boton
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         BC2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Capital2.getText() == ""){
+                if (Capital2.getText() == "" || Capital2.getText() == SeleccionCapital.getText()){
                     //Boton sin texto no hacer nada
                 }else {
                     //Cambia el color del boton
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
         BC3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Capital3.getText() == ""){
+                if (Capital3.getText() == "" || Capital3.getText() == SeleccionCapital.getText()){
                     //Boton sin texto no hacer nada
                 }else {
                     //Cambia el color del boton
