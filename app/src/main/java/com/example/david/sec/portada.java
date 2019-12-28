@@ -16,6 +16,10 @@ public class portada extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_portada);
 
+        //Poner icono en action Bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         bjugar = (Button) findViewById(R.id.bjugar);
         btnListaEstados = (Button) findViewById(R.id.btnListaEstados);
 

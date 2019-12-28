@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Poner icono en action Bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         //Conexion a los TextView
         Estado1 = (TextView) findViewById(R.id.textView);
         Estado2 = (TextView) findViewById(R.id.textView2);

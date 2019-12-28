@@ -17,12 +17,16 @@ public class SegundaActividad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda_actividad);
 
+        //Poner icono en action Bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         TusPuntos = (TextView) findViewById(R.id.TuPuntuacion);
 
         Bundle bundle = getIntent().getExtras();
         String dato = bundle.getString("MandarPuntos");
 
-        TusPuntos.setText("Fin del juego puntuación: "+dato);
+        TusPuntos.setText("Puntuación: "+dato);
 
         bFin = (Button) findViewById(R.id.bFin);
 
