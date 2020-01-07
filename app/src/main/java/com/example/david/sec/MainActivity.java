@@ -1,6 +1,7 @@
 package com.example.david.sec;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.support.annotation.DrawableRes;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.david.sec.utilidades.Utilidades;
 
 import java.util.Random;
 
@@ -194,6 +197,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Fin del OnCreate
     }
+
+    //Metodos del programa
 
     //Califica
     public void calificiar(){
@@ -497,6 +502,9 @@ public class MainActivity extends AppCompatActivity {
     //Finaliza el Activiti principal
     public void FinalizaActivity(){
         if (Vidas == 0){
+
+            registrarUsuariosSQL();
+
             Intent i = new Intent(this, SegundaActividad.class);
             i.putExtra("MandarPuntos", Puntos.toString());
             startActivity(i);
@@ -517,5 +525,23 @@ public class MainActivity extends AppCompatActivity {
     //Inicia las vidas
     public void IniciaVidas() {
         TotalVidas.setText("Vidas: "+Vidas);
+    }
+
+    //Guarda en la base de datos, se usa en el metodo FinalizaActivity
+    private void registrarUsuariosSQL() {
+        //abre la base de datos para escritura
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this, "bd_usuarios",null,1);
+        SQLiteDatabase db = conn.getWritableDatabase();
+
+        String insert = "INSERT INTO " + Utilidades.TABLA_PUNTOSUSUARIO
+                + "("
+                + Utilidades.CAMPO_MARCADOR + ")"
+                + "VALUES (" + Puntos + ")" ;
+
+        db.execSQL(insert);
+
+        Toast.makeText(getApplicationContext(),"Datos Guardados",Toast.LENGTH_SHORT).show();
+
+        db.close();
     }
 }
