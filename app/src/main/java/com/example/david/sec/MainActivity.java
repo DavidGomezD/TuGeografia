@@ -540,8 +540,6 @@ public class MainActivity extends AppCompatActivity {
 
         db.execSQL(insert);
 
-        Toast.makeText(getApplicationContext(),"Datos Guardados",Toast.LENGTH_SHORT).show();
-
         db.close();
     }
 }

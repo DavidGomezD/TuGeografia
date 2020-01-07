@@ -77,9 +77,6 @@ public class SegundaActividad extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"El documento no existe",Toast.LENGTH_SHORT).show();
 
         }
-
-
-
     }
 
 }

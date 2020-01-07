@@ -18,6 +18,10 @@ public class ActivityListaEstados extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_estados);
 
+        //Poner icono en action Bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         recyclerViewEstados = (RecyclerView) findViewById(R.id.RecyclerView);
         recyclerViewEstados.setLayoutManager(new LinearLayoutManager(this));
 
