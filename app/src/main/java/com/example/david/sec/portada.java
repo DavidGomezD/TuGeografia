@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class portada extends AppCompatActivity {
 
-    Button bjugar,btnListaEstados;
+    Button bjugar,btnListaEstados, botonInformacion;
 
 
     @Override
@@ -21,6 +21,7 @@ public class portada extends AppCompatActivity {
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         bjugar = (Button) findViewById(R.id.bjugar);
+        botonInformacion = (Button)findViewById(R.id.botonInformacion);
         btnListaEstados = (Button) findViewById(R.id.btnListaEstados);
 
         bjugar.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +36,13 @@ public class portada extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(portada.this, ActivityListaEstados.class);
+                startActivity(i);
+            }
+        });
+        botonInformacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Informacion.class);
                 startActivity(i);
             }
         });
