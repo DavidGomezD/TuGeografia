@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Informacion">
+            android:name=".InformacionApp"
+            android:screenOrientation="landscape">
         </activity>
-        <activity
-            android:name=".ActivityListaEstados" />
+        <activity android:name=".ActivityListaEstados" />
         <activity
             android:name=".portada"
             android:screenOrientation="landscape">

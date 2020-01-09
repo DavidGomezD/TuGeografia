@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class portada extends AppCompatActivity {
 
-    Button bjugar,btnListaEstados, botonInformacion;
+    Button bjugar,btnListaEstados, btnInformacion;
 
 
     @Override
@@ -24,10 +24,12 @@ public class portada extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        //Id de los botones
         bjugar = (Button) findViewById(R.id.bjugar);
-        botonInformacion = (Button)findViewById(R.id.botonInformacion);
+        btnInformacion = (Button) findViewById(R.id.botonInformacion);
         btnListaEstados = (Button) findViewById(R.id.btnListaEstados);
 
+        //Eventos de click
         bjugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,10 +45,11 @@ public class portada extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        botonInformacion.setOnClickListener(new View.OnClickListener() {
+
+        btnInformacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Informacion.class);
+                Intent i = new Intent(portada.this, InformacionApp.class);
                 startActivity(i);
             }
         });
