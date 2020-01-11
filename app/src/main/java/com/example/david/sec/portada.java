@@ -1,5 +1,6 @@
 package com.example.david.sec;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,14 +34,18 @@ public class portada extends AppCompatActivity {
         bjugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // animacion en cambio de activity
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(portada.this);
+                // iniciamos el cambio de actividad
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                startActivity(i, options.toBundle());
             }
         });
 
         btnListaEstados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // iniciamos el cambio de actividad
                 Intent i = new Intent(portada.this, ActivityListaEstados.class);
                 startActivity(i);
             }
@@ -49,11 +54,12 @@ public class portada extends AppCompatActivity {
         btnInformacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // animacion en cambio de activity
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(portada.this);
+                // iniciamos el cambio de actividad
                 Intent i = new Intent(portada.this, InformacionApp.class);
-                startActivity(i);
+                startActivity(i, options.toBundle());
             }
         });
-
     }
-
 }
