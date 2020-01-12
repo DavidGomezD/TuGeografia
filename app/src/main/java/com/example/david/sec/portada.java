@@ -54,11 +54,9 @@ public class portada extends AppCompatActivity {
         btnInformacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // animacion en cambio de activity
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(portada.this);
                 // iniciamos el cambio de actividad
                 Intent i = new Intent(portada.this, InformacionApp.class);
-                startActivity(i, options.toBundle());
+                startActivity(i);
             }
         });
     }

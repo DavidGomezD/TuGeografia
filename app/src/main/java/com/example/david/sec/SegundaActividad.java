@@ -1,5 +1,6 @@
 package com.example.david.sec;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -46,8 +47,9 @@ public class SegundaActividad extends AppCompatActivity {
         bFin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SegundaActividad.this);
                 Intent i = new Intent(getApplicationContext(), portada.class);
-                startActivity(i);
+                startActivity(i, options.toBundle());
                 //termina la actividad para que no se pueda regresar
                 finish();
             }
