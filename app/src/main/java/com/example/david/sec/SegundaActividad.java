@@ -1,12 +1,13 @@
 package com.example.david.sec;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,13 +24,17 @@ public class SegundaActividad extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Quita la barra de notificaciones
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_segunda_actividad);
 
         conn = new ConexionSQLiteHelper(getApplicationContext(),"bd_usuarios", null, 1);
 
         //Poner icono en action Bar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         TusPuntos = (TextView) findViewById(R.id.TuPuntuacion);
         TuRecord = (TextView) findViewById(R.id.TuRecord);
@@ -47,9 +52,6 @@ public class SegundaActividad extends AppCompatActivity {
         bFin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SegundaActividad.this);
-                Intent i = new Intent(getApplicationContext(), portada.class);
-                startActivity(i, options.toBundle());
                 //termina la actividad para que no se pueda regresar
                 finish();
             }
